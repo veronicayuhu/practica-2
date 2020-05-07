@@ -29,4 +29,8 @@ class ProductsManagement {
             }
         }
     }
+    showProducts() {
+        return this.listproducts;
+    }
 }
+export {Products, ProductsManagement}
