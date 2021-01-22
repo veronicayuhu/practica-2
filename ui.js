@@ -49,6 +49,21 @@ class Ui {
         this.loadTable();
 
     }
+
+
+    // Practica 2
+    actualizarProducto(name, description, quantity, newName, newDescription, newQuantity) {
+        let product = new Products(name, description, quantity);
+        let newProduct = new Products(newName, newDescription, newQuantity);
+        this.manager.updateProducts(product, newProduct);
+        this.loadTable();
+    }
+
+    eliminarProducto(name, description, quantity) {
+        let product = new Products(name, description, quantity);
+        this.manager.removeProducts(product);
+        this.loadTable();
+    }
 }
 let ui = new Ui();
 ui.loadTable();
